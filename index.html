@@ -6,6 +6,9 @@
   <title>Beyond Layer 8 | IT Support for Humans</title>
   <meta name="description" content="People-first IT support for Southwest Georgia. Computer repairs, Wi-Fi, Microsoft 365, backups, and on-site troubleshooting." />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 
 <body>
@@ -155,8 +158,9 @@
             Tell us what’s going on. We’ll respond with next steps and scheduling options.
           </p>
 
-          <!-- Cloudflare Pages Forms -->
-          <form method="POST" data-static-form-name="support-request" name="support-request">
+          <!-- Contact Form (POSTs to Cloudflare Worker) -->
+          <form method="POST" action="https://beyondlayer8-contact-form.beyond-layer-8-account.workers.dev">
+
             <div class="form-row">
               <label>
                 Name
@@ -189,6 +193,9 @@
                 <input type="text" name="best_time" placeholder="Example: weekdays after 3pm" />
               </label>
             </div>
+
+            <!-- Turnstile widget (replace sitekey if you rotate it) -->
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAACgFov6Gs0mLOpKG"></div>
 
             <button class="btn primary" type="submit">Send Request</button>
             <p class="fineprint">No spam — we only use this to reply about your request.</p>
