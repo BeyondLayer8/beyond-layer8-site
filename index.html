@@ -7,7 +7,19 @@
   <meta name="description" content="People-first IT support for Southwest Georgia. Computer repairs, Wi-Fi, Microsoft 365, backups, and on-site troubleshooting." />
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Cloudflare Turnstile -->
+  <!-- CSP: allow Turnstile + inline year script -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com;
+    frame-src https://challenges.cloudflare.com;
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' data:;
+    connect-src 'self';
+    base-uri 'self';
+    form-action 'self' https://beyondlayer8-contact-form.beyond-layer-8-account.workers.dev;
+  ">
+
+  <!-- Turnstile -->
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 
@@ -158,9 +170,12 @@
             Tell us what’s going on. We’ll respond with next steps and scheduling options.
           </p>
 
-          <!-- Contact Form (POSTs to Cloudflare Worker) -->
-          <form method="POST" action="https://beyondlayer8-contact-form.beyond-layer-8-account.workers.dev">
-
+          <!-- Worker-backed form -->
+          <form
+            method="POST"
+            action="https://beyondlayer8-contact-form.beyond-layer-8-account.workers.dev/submit"
+            name="support-request"
+          >
             <div class="form-row">
               <label>
                 Name
@@ -194,8 +209,8 @@
               </label>
             </div>
 
-            <!-- Turnstile widget (replace sitekey if you rotate it) -->
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAACgFov6Gs0mLOpKG"></div>
+            <!-- Turnstile widget goes INSIDE the form -->
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAACgFov6GsQmLOpKG"></div>
 
             <button class="btn primary" type="submit">Send Request</button>
             <p class="fineprint">No spam — we only use this to reply about your request.</p>
@@ -241,7 +256,9 @@
 
   </main>
 
-  <script src="main.js" defer></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
