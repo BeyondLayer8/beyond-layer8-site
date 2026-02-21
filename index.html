@@ -167,6 +167,11 @@
             action="/submit"
             name="support-request"
           >
+            <!-- Honeypot field (bots fill this; humans never see it) -->
+            <div style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">
+              <label>Company <input type="text" name="company" autocomplete="off"></label>
+            </div>
+            
             <div class="form-row">
               <label>
                 Name
