@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Beyond Layer 8 | IT Support for Humans</title>
+  <meta name="description" content="People-first IT support for Southwest Georgia. Computer repairs, Wi-Fi, Microsoft 365, backups, and on-site troubleshooting." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img class="brand-logo" src="logo.png" alt="Beyond Layer 8 Logo" />
+        <div class="brand-text">
+          <div class="brand-name">Beyond Layer 8</div>
+          <div class="brand-tagline">Making technology make sense — with patience and integrity.</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="nav-cta">Request Help</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+
+        <div class="hero-copy">
+          <h1>Reliable IT support for Southwest Georgia.</h1>
+
+          <p class="subhead">
+            Serving Bainbridge, Donalsonville, Colquitt, Climax, Cairo, and surrounding areas.
+            Friendly, understandable technology help for homes and small businesses.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#contact">Request Support</a>
+            <a class="btn ghost" href="mailto:help@beyondlayer8.com">Email Us</a>
+          </div>
+
+          <div class="trust">
+            <span>On-Site in Southwest GA</span>
+            <span>Remote Support Available</span>
+            <span>Fast Response</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h2>Common Help Requests</h2>
+          <ul>
+            <li><strong>Computer repairs & support</strong> (slow PC/Mac, errors, crashes)</li>
+            <li><strong>On-site troubleshooting</strong> for homes and small businesses</li>
+            <li>Email & Microsoft 365 problems</li>
+            <li>Wi-Fi coverage issues</li>
+            <li>New computer setup</li>
+            <li>Antivirus & malware removal</li>
+            <li>Backup & data recovery</li>
+          </ul>
+          <p class="note"><strong>Email:</strong> help@beyondlayer8.com</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT / MISSION -->
+    <section id="about" class="section alt">
+      <div class="container">
+        <h2>Mission</h2>
+        <p class="section-lead">
+          Our mission is to serve others through honest and dependable technology support. We strive to remove fear and frustration from technology, treat every customer with patience and respect, and operate with integrity in both our work and our word.
+        </p>
+
+        <h2>About Beyond Layer 8</h2>
+        <div class="card">
+          <p>
+            Beyond Layer 8 is a people-first IT consulting service focused on helping everyday users feel confident with technology. The name comes from the networking joke that the biggest computer problem exists beyond the seven layers of the OSI model — the human layer. Instead of blaming the user, we start there.
+          </p>
+
+          <p>
+            Our approach is guided by Christian principles: patience, honesty, and stewardship. Technology should serve people, not frustrate them, and everyone deserves clear answers without feeling talked down to.
+          </p>
+
+          <p>
+            We believe most technology problems aren’t just technical — they’re communication problems. Devices are designed by engineers but used by real people, and the gap between the two creates stress. Our role is to close that gap with understanding and clarity.
+          </p>
+
+          <p>
+            We provide in-home and remote support for personal computers, Wi-Fi networks, printers, smart home devices, backups, security basics, and troubleshooting. Every service includes explanation and guidance so the solution lasts beyond the visit.
+          </p>
+
+          <p>
+            Our goal is not just to repair devices, but to leave people more confident than we found them.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Services</h2>
+        <p class="section-lead">Practical help for real people — explained clearly, without judgement.</p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Computer Repairs & Support</h3>
+            <p>Troubleshooting, tune-ups, and fixing what’s broken.</p>
+          </div>
+
+          <div class="card">
+            <h3>Antivirus & Malware Removal</h3>
+            <p>Basic protection, cleanup, and safety checks.</p>
+          </div>
+
+          <div class="card">
+            <h3>Microsoft 365</h3>
+            <p>Email and account setup, login issues, and cleanup.</p>
+          </div>
+
+          <div class="card">
+            <h3>Networking</h3>
+            <p>Wi-Fi coverage, router setup, and connectivity issues.</p>
+          </div>
+
+          <div class="card">
+            <h3>Backups</h3>
+            <p>Data protection, recovery planning, and backup setup.</p>
+          </div>
+
+          <div class="card">
+            <h3>New Devices</h3>
+            <p>PC & Mac setup, migration, and best-practice configuration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container contact">
+
+        <div>
+          <h2>Request Support</h2>
+          <p class="section-lead">
+            Tell us what’s going on. We’ll respond with next steps and scheduling options.
+          </p>
+
+          <!-- Cloudflare Pages Forms -->
+          <form method="POST" data-static-form-name="support-request" name="support-request">
+            <div class="form-row">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+
+              <label>
+                Email
+                <input type="email" name="email" placeholder="you@company.com" required />
+              </label>
+            </div>
+
+            <label>
+              What do you need help with?
+              <textarea name="message" rows="6" placeholder="Example: computer won’t boot, Wi-Fi drops, Outlook login loop..." required></textarea>
+            </label>
+
+            <div class="form-row">
+              <label>
+                Preferred contact method
+                <select name="preferred_contact">
+                  <option>Email</option>
+                  <option>Phone call</option>
+                  <option>Text</option>
+                </select>
+              </label>
+
+              <label>
+                Best time to reach you
+                <input type="text" name="best_time" placeholder="Example: weekdays after 3pm" />
+              </label>
+            </div>
+
+            <button class="btn primary" type="submit">Send Request</button>
+            <p class="fineprint">No spam — we only use this to reply about your request.</p>
+          </form>
+
+          <p class="note">Or email directly: <a class="link" href="mailto:help@beyondlayer8.com">help@beyondlayer8.com</a></p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Service Area</h3>
+          <p>
+            Southwest Georgia including: Bainbridge, Donalsonville, Colquitt, Climax, Cairo, and surrounding communities.
+          </p>
+
+          <div class="divider"></div>
+
+          <h3>What happens next?</h3>
+          <ol>
+            <li>We review your request (usually same day).</li>
+            <li>We reply with troubleshooting steps or scheduling options.</li>
+            <li>If needed, we remote in or schedule an on-site visit.</li>
+          </ol>
+
+          <div class="divider"></div>
+
+          <p class="muted">
+            Need on-site help? We serve Southwest Georgia and surrounding communities. Prefer remote support? Many issues can be resolved the same day.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Beyond Layer 8, LLC</p>
+        <p class="muted">
+          We try to treat people the way we’d want tech support to treat us — patiently, honestly, and with a little grace.
+        </p>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
